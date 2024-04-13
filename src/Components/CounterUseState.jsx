@@ -1,17 +1,14 @@
-import React from 'react'
-import { useState } from 'react';
+import React, { useEffect } from 'react'
+import { useState, useEffect } from 'react';
 
-function Contador() {
+function Counter() {
     const [count, setCount] = useState(0);
     return (
         <div>
-            <br />
-            <hr />
-            Contador: {count}
+            <h2>Count: {count}</h2>
             <button className='btn-count' onClick={() => setCount(count - 1)}>-</button>
             <button className='btn-count' onClick={() => setCount(count + 1)}>+</button>
         </div>
     )
 }
-
-export default Contador
+export default Counter
